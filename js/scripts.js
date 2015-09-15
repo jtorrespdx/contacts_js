@@ -24,6 +24,7 @@ function resetFields() {
   $("input.new-street").val("");
   $("input.new-city").val("");
   $("input.new-state").val("");
+  $("div.new-address").not(":first").remove();
 }
 
 $(document).ready(function() {
@@ -31,15 +32,15 @@ $(document).ready(function() {
     $("#new-addresses").append('<div class="new-address">' +
                                   '<div class="form-group">' +
                                     '<label for="new-street">Street</label>' +
-                                    '<input type="text" class="form-control new-street">' +
+                                    '<input type="text" class="form-control new-street" required>' +
                                   '</div>' +
                                   '<div class="form-group">' +
                                     '<label for="new-city">City</label>' +
-                                    '<input type="text" class="form-control new-city">' +
+                                    '<input type="text" class="form-control new-city" required>' +
                                   '</div>' +
                                   '<div class="form-group">' +
                                     '<label for="new-state">State</label>' +
-                                    '<input type="text" class="form-control new-state">' +
+                                    '<input type="text" class="form-control new-state" required>' +
                                   '</div>' +
                                 '</div>');
   });
@@ -78,5 +79,7 @@ $(document).ready(function() {
     });
 
     resetFields();
+
+    // $("#new-addresses").not(".new-address-append");
   });
 });
