@@ -2,11 +2,11 @@
 
 ##### _Epicodus JavaScript Address Book Exercise, 09/14/15_
 
-#### By Alexandra Brown and Deron Johnson
+#### By Alexandra Brown and Deron Johnson and Jose Torres
 
 ## Description
 
-This address book allows a user to add a first name, last name and multiple addresses for each contact, and then displays those contacts in a list.
+This address book allows a user to add a first name, last name and multiple addresses for each contact, and then displays those contacts in a list. Animation added.
 
 ## Setup
 

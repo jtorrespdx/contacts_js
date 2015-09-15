@@ -24,25 +24,39 @@ function resetFields() {
   $("input.new-street").val("");
   $("input.new-city").val("");
   $("input.new-state").val("");
-  $("div.new-address").not(":first").remove();
+  $("div.new-address").not(":first").fadeOut(800);
 }
 
 $(document).ready(function() {
   $("#add-address").click(function() {
     $("#new-addresses").append('<div class="new-address">' +
-                                  '<div class="form-group">' +
-                                    '<label for="new-street">Street</label>' +
-                                    '<input type="text" class="form-control new-street" required>' +
+                                  '<div class="fademe1">' +
+                                    '<div class="form-group">' +
+                                      '<label for="new-street">Street</label>' +
+                                      '<input type="text" class="form-control new-street" required>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="fademe2">' +
+                                    '<div class="form-group">' +
+                                      '<label for="new-city">City</label>' +
+                                      '<input type="text" class="form-control new-city" required>' +
+                                      '</div>' +
+                                    '</div>' +
+                                    '<div class="fademe3">' +
+                                    '<div class="form-group">' +
+                                      '<label for="new-state">State</label>' +
+                                      '<input type="text" class="form-control new-state" required>' +
+                                    '</div>' +
+                                    '</div>' +
                                   '</div>' +
-                                  '<div class="form-group">' +
-                                    '<label for="new-city">City</label>' +
-                                    '<input type="text" class="form-control new-city" required>' +
-                                  '</div>' +
-                                  '<div class="form-group">' +
-                                    '<label for="new-state">State</label>' +
-                                    '<input type="text" class="form-control new-state" required>' +
-                                  '</div>' +
-                                '</div>');
+                                '</div>')
+    $(".fademe1").hide().fadeIn(400);
+    $(".fademe2").hide().fadeIn(825);
+    $(".fademe3").hide().fadeIn(1350);
+    $( ".fademe1" ).removeClass('fademe1').addClass('fadedme');
+    $( ".fademe2" ).removeClass('fademe2').addClass('fadedme');
+    $( ".fademe3" ).removeClass('fademe3').addClass('fadedme');
+
   });
 
 
